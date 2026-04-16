@@ -68,7 +68,7 @@ export default function ProductCard({ product, reversed }: ProductCardProps) {
       </div>
       <div className="p-6 bg-surface-container-low rounded-xl border border-outline-variant/10">
         <p className="font-label text-xs uppercase tracking-widest text-primary mb-2">
-          Sos
+          Önerilen Sos Karışımı
         </p>
         <p className="italic text-on-surface">{product.sauce}</p>
       </div>

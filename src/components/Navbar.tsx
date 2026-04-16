@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 const navLinks = [
+  { href: "#hakkimizda", label: "Hakkımızda" },
   { href: "#iris", label: "Iris" },
   { href: "#demeter", label: "Demeter" },
   { href: "#hera", label: "Hera" },
