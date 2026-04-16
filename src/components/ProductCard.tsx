@@ -45,13 +45,6 @@ export default function ProductCard({ product, reversed }: ProductCardProps) {
 
   const contentBlock = (
     <div className="space-y-8">
-      <div className="flex items-center gap-4">
-        <div
-          className={`inline-block px-4 py-1 ${style.badge} rounded-full font-label text-xs tracking-widest uppercase`}
-        >
-          {product.series}
-        </div>
-      </div>
       <h3 className="font-headline text-6xl text-on-surface italic">
         {product.name}
       </h3>
