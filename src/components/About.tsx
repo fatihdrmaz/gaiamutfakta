@@ -18,7 +18,7 @@ export default function About() {
         <div className="space-y-8 font-headline text-xl md:text-2xl italic leading-relaxed text-on-surface/80 text-center">
           <p>
             <span className="font-semibold not-italic text-primary">
-              Gaia Mutfakta,
+              GAIA Mutfakta,
             </span>{" "}
             yeryüzünün sunduğu eşsiz doğallığı ve zarafeti sofralara taşıma
             fikriyle hayat buldu.

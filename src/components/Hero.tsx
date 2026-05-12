@@ -1,10 +1,7 @@
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 
-// Ahşap masa üzerinde salata kaseleri ve yeşillikler. Müşteri kendi
-// fotoğrafını sağladığında buradaki URL değiştirilecek.
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=2400&q=80";
+const HERO_IMAGE = "/gaiahero.jpg";
 
 export default function Hero() {
   return (
@@ -13,7 +10,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Image
           src={HERO_IMAGE}
-          alt="Ahşap masa üzerinde yeşilliklerle hazırlanmış salata kaseleri"
+          alt="Gaia Mutfak — ana görsel"
           fill
           priority
           className="object-cover"
