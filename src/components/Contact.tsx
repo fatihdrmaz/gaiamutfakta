@@ -1,12 +1,23 @@
 import Image from "next/image";
+import {
+  CONTACT_ADDRESS,
+  CONTACT_EMAIL,
+  CONTACT_MAPS_QUERY,
+  CONTACT_PHONE,
+} from "@/data/contact";
 import { INSTAGRAM_LEDGER_URL, InstagramQr } from "./InstagramQr";
+
+const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT_MAPS_QUERY)}`;
 
 const BOTANICAL_CONTACT =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuAWzlsHnzW-AJdZoDFg4Phg7wfKExn2eqBgJjhnhWDjr69IgCZ7122aVvfAHGKgn4EPnO3zlek2KwrIBJrCsFqBxxwTcRQ3L7p5yfin3qMlOAFY-GlS8QYnzciexWAdcTpwnhSKwF3EOM3U2hjUUQR4jo5j9CNWPKgtXPikN1vk45tFriFr6s8_KTpF_RO71dNSGDDO8PDnxHwjOuO5Rrga-cjS1ovZmPRPssM32mxzarcvUmPrKXi2WGezRxnRDn24biUM49xkPXE";
 
 export default function Contact() {
   return (
-    <section className="px-6 md:px-24 py-24 bg-surface-container-low overflow-hidden relative">
+    <section
+      id="iletisim"
+      className="px-6 md:px-24 py-24 bg-surface-container-low overflow-hidden relative"
+    >
       {/* Botanical Peeking Element */}
       <div className="absolute top-0 right-0 w-64 opacity-10 pointer-events-none transform translate-x-1/2 -translate-y-1/2">
         <Image
@@ -18,18 +29,59 @@ export default function Contact() {
         />
       </div>
 
+      <div className="max-w-7xl mx-auto mb-16 md:mb-20">
+        <p className="font-label text-xs tracking-[0.3em] uppercase text-primary mb-4 text-center md:text-left">
+          İletişim
+        </p>
+        <h2 className="font-headline text-4xl md:text-5xl text-center md:text-left">
+          İletişim bilgileri
+        </h2>
+        <div className="w-16 h-[2px] bg-primary mt-8 opacity-30 mx-auto md:mx-0" />
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center max-w-7xl mx-auto">
         <div className="space-y-12">
           <div className="space-y-4">
             <h4 className="font-label text-xs uppercase tracking-[0.3em] text-outline">
               Mutfağımıza bekleriz
             </h4>
-            <p className="font-headline text-4xl leading-snug">
-              Mebusan Yokuşu 26/B,
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-headline text-4xl leading-snug text-on-surface hover:text-primary transition-colors block"
+            >
+              {CONTACT_ADDRESS.line1}
               <br />
-              Beyoğlu - İstanbul
-            </p>
+              {CONTACT_ADDRESS.line2}
+            </a>
           </div>
+          {CONTACT_PHONE ? (
+            <div className="space-y-4">
+              <h4 className="font-label text-xs uppercase tracking-[0.3em] text-outline">
+                Telefon
+              </h4>
+              <a
+                href={`tel:${CONTACT_PHONE.replace(/\s/g, "")}`}
+                className="font-headline text-2xl md:text-3xl text-on-surface hover:text-primary transition-colors block"
+              >
+                {CONTACT_PHONE}
+              </a>
+            </div>
+          ) : null}
+          {CONTACT_EMAIL ? (
+            <div className="space-y-4">
+              <h4 className="font-label text-xs uppercase tracking-[0.3em] text-outline">
+                E-posta
+              </h4>
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="font-headline text-2xl md:text-3xl text-on-surface hover:text-primary transition-colors block break-all"
+              >
+                {CONTACT_EMAIL}
+              </a>
+            </div>
+          ) : null}
           <div className="space-y-4">
             <h4 className="font-label text-xs uppercase tracking-[0.3em] text-outline">
               Bizi takip edin
