@@ -7,7 +7,7 @@ export default function About() {
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col items-center mb-16">
           <p className="font-label text-xs tracking-[0.3em] uppercase text-primary mb-4">
-            Our Story
+            Hikâyamız
           </p>
           <h2 className="font-headline text-5xl md:text-6xl text-center">
             Hakkımızda

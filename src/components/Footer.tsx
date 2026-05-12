@@ -1,16 +1,15 @@
 import Image from "next/image";
 
-const LOGO_URL =
-  "https://lh3.googleusercontent.com/aida/ADBb0ugts0jg7DEs5YDXPQyAXymInFi2Tsp8-XwXhGS9wCNYSXFoOiBVW3uOXJPsch9jBT3Qr3fDtU9nT3xFcv3iZCRDZ05hwcWDz5e2aJf5IfLbWzyW5B3YM_tllmmn2aOIPUvZ77k1FIhVv7s1d-oTuKBfxkF96ToQ8dhAD1QKvLMpEBcbBpEtair1wXFKP5cx0KszbDaw0hQ1EIUS2o1kyiMl7VarqrUtehwZWz-FaopV8vY7EUH_iSYK4ckqH3WiwGpTq9ye5XNhaw";
+const LOGO_SRC = "/logogaia.webp";
 
 const footerLinks = [
   [
-    { href: "#", label: "Privacy Policy" },
-    { href: "#", label: "Shipping" },
+    { href: "#", label: "Gizlilik Politikası" },
+    { href: "#", label: "Teslimat ve Kargo" },
   ],
   [
-    { href: "#", label: "Wholesale" },
-    { href: "#", label: "Sustainability" },
+    { href: "#", label: "Toptan Satış" },
+    { href: "#", label: "Sürdürülebilirlik" },
   ],
 ];
 
@@ -20,15 +19,16 @@ export default function Footer() {
       <div>
         <div className="mb-6">
           <Image
-            src={LOGO_URL}
-            alt="Gaia Mutfak Logo"
+            src={LOGO_SRC}
+            alt="Gaia Mutfak logosu"
             width={140}
             height={40}
             className="h-auto mix-blend-multiply"
           />
         </div>
         <p className="font-label text-sm tracking-wide uppercase text-on-surface/60">
-          &copy; 2024 Gaia Mutfak. Artisanal Ledger of Botanical Ingredients.
+          &copy; 2026 Gaia Mutfak. Botanik mutfağımızın özenle seçilmiş
+          lezzet kaydı.
         </p>
       </div>
       {footerLinks.map((group, i) => (

@@ -8,16 +8,15 @@ const navLinks = [
   { href: "#rhea", label: "Rhea" },
 ];
 
-const LOGO_URL =
-  "https://lh3.googleusercontent.com/aida/ADBb0ugts0jg7DEs5YDXPQyAXymInFi2Tsp8-XwXhGS9wCNYSXFoOiBVW3uOXJPsch9jBT3Qr3fDtU9nT3xFcv3iZCRDZ05hwcWDz5e2aJf5IfLbWzyW5B3YM_tllmmn2aOIPUvZ77k1FIhVv7s1d-oTuKBfxkF96ToQ8dhAD1QKvLMpEBcbBpEtair1wXFKP5cx0KszbDaw0hQ1EIUS2o1kyiMl7VarqrUtehwZWz-FaopV8vY7EUH_iSYK4ckqH3WiwGpTq9ye5XNhaw";
+const LOGO_SRC = "/logogaia.webp";
 
 export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#fff8f1]/80 backdrop-blur-xl flex justify-between items-center px-8 py-4">
       <div className="flex items-center">
         <Image
-          src={LOGO_URL}
-          alt="Gaia Mutfak Logo"
+          src={LOGO_SRC}
+          alt="Gaia Mutfak logosu"
           width={140}
           height={40}
           className="h-auto mix-blend-multiply"
