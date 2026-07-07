@@ -30,9 +30,6 @@ export default function Contact() {
       </div>
 
       <div className="max-w-7xl mx-auto mb-16 md:mb-20">
-        <p className="font-label text-xs tracking-[0.3em] uppercase text-primary mb-4 text-center md:text-left">
-          İletişim
-        </p>
         <h2 className="font-headline text-4xl md:text-5xl text-center md:text-left">
           İletişim bilgileri
         </h2>
@@ -43,7 +40,7 @@ export default function Contact() {
         <div className="space-y-12">
           <div className="space-y-4">
             <h4 className="font-label text-xs uppercase tracking-[0.3em] text-outline">
-              Mutfağımıza bekleriz
+              GAIA&rsquo;nın mutfağına bekleriz
             </h4>
             <a
               href={MAPS_URL}

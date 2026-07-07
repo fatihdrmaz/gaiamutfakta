@@ -2,13 +2,16 @@ import Image from "next/image";
 
 const LOGO_SRC = "/logogaia.webp";
 
-const footerLinks = [
+const WHOLESALE_MAIL =
+  "mailto:info@gaiamutfakta.com?subject=Toptan%20Sat%C4%B1%C5%9F%20Talebi";
+
+const footerLinks: { href: string; label: string; external?: boolean }[][] = [
   [
     { href: "#", label: "Gizlilik Politikası" },
     { href: "#", label: "Teslimat ve Kargo" },
   ],
   [
-    { href: "#", label: "Toptan Satış" },
+    { href: WHOLESALE_MAIL, label: "Toptan Satış" },
     { href: "#", label: "Sürdürülebilirlik" },
   ],
 ];
@@ -27,7 +30,7 @@ export default function Footer() {
           />
         </div>
         <p className="font-label text-sm tracking-wide uppercase text-on-surface/60">
-          &copy; 2026 Gaia Mutfak. Botanik mutfağımızın özenle seçilmiş
+          &copy; 2026 GAIA Mutfak. Botanik mutfağımızın özenle seçilmiş
           lezzet kaydı.
         </p>
       </div>
