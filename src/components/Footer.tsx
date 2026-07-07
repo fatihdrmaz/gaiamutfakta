@@ -4,15 +4,16 @@ const LOGO_SRC = "/logogaia.webp";
 
 const WHOLESALE_MAIL =
   "mailto:info@gaiamutfakta.com?subject=Toptan%20Sat%C4%B1%C5%9F%20Talebi";
+const TRENDYOL_URL = "https://yemek.trendyol.com";
 
 const footerLinks: { href: string; label: string; external?: boolean }[][] = [
   [
-    { href: "#", label: "Gizlilik Politikası" },
-    { href: "#", label: "Teslimat ve Kargo" },
+    { href: "/gizlilik-politikasi", label: "Gizlilik Politikası" },
+    { href: TRENDYOL_URL, label: "Teslimat ve Kargo", external: true },
   ],
   [
     { href: WHOLESALE_MAIL, label: "Toptan Satış" },
-    { href: "#", label: "Sürdürülebilirlik" },
+    { href: "/surdurulebilirlik", label: "Sürdürülebilirlik" },
   ],
 ];
 
@@ -40,6 +41,9 @@ export default function Footer() {
             <a
               key={link.label}
               href={link.href}
+              {...(link.external
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
               className="font-label text-sm tracking-wide uppercase text-on-surface/60 hover:underline decoration-primary/40 underline-offset-4 transition-all"
             >
               {link.label}
